@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "teseterproject": {
+      "hosting": {
+        "testerProjectWithFirebase": [
+          "teseterproject"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "teseterproject"
+  }
+}

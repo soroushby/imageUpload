@@ -1,0 +1,28 @@
+.main {
+  min-height: 100vh;
+  // background-image: url(../../../assets/images/4048774.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 1.6rem;
+}
+
+.card {
+  width: 60rem;
+
+  background-color: rgba(245, 245, 245, 0.753);
+  border-top: #00b4d8 solid 2rem;
+  box-shadow: 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.submit-button {
+  width: 14rem;
+  background-color: rgba(42, 42, 235, 0.877);
+  color: white;
+  border-radius: 300px;
+  margin-top: 2rem;
+}

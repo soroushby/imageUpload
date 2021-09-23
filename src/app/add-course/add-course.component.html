@@ -1,0 +1,67 @@
+<form class="container" [formGroup]="courseForm">
+  <div fxLayout="column" fxLayoutAlign="center center" ngClass.lt-md="res">
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="data1"
+        placeholder="Enter patient's name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="data2"
+        placeholder="Enter patient's name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="data3"
+        placeholder="Enter patient's name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="seqNo"
+        placeholder="Enter patient's name"
+      />
+    </mat-form-field>
+    <div class="course-image-upload">
+      <span>Course thumbnail:</span>
+
+      <img
+        class="course-thumbnail mat-elevation-z3"
+        [src]="iconUrl"
+        *ngIf="iconUrl"
+      />
+
+      <input type="file" (change)="uploadThumbnail($event)" />
+
+      <div
+        class="upload-progress"
+        *ngIf="percentageChanges$ | async as percentage"
+      >
+        <mat-progress-bar
+          class="progress-bar"
+          mode="determinate"
+          [value]="percentage"
+        >
+        </mat-progress-bar>
+
+        <span>{{ percentage / 100 | percent }}</span>
+      </div>
+    </div>
+
+    <button
+      mat-raised-button
+      style="float: right"
+      (click)="onCreateCourse()"
+      class="submit-button"
+      [disabled]="courseForm.invalid"
+    >
+      save
+    </button>
+  </div>
+</form>
